@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&family=Quicksand:wght@400;700&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header-title {
+    background-color: #e73029;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul
+{
+    position: relative;
+    display: flex;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+aside {
+    margin-top: 100px;
+    flex: 1;
+}
+
+aside h2, aside h3, figcaption {
+    text-align: center;
+}
+
+aside table {
+    text-align: left;
+}
+
+#sejarah {
+    margin-top: 120px;
+}
+
+header {
+    display: inline;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #e73029;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e73029;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-title {
+        padding: 20px 50px;
+    }
+    #sejarah {
+        margin-top: 230px;
+    }
+    aside {
+        margin-top: 1px;
+    }
+    .card {
+        margin-top: 20px;
+    }
+    .featured-image {
+        max-height: 200px;
+    }
+    .dropdown-content {
+        min-width: 150px;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title {
+        padding-top: 10px;
+    }
+}
